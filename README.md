@@ -1,7 +1,7 @@
 # laravel-bog
 Course Laravel In Sun-Asterisk Summer 2020
 
-A. Installation
+# Installation
 
 ## Installing Laravel
 
