@@ -24,8 +24,8 @@ php artisan serve
 - In public directory is your web server's document/ web roor.
 - The index.php in public directory serves as front controller for all HTTP request entering your application
 
-** Configuaration Files**
+**Configuaration Files**
 - All configuration files for the Laravel framework are in the config directory
 
-** Directory Permissions**
+**Directory Permissions**
 
