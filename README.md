@@ -83,6 +83,8 @@ location / {
 
 #Vietnamese documentation
 
+Link document: https://viblo.asia/p/tim-hieu-ve-framwork-laravel-p1-amoG8191vz8P
+
 **Laravel có 3 đặc tính nổi trội:**
 - Đơn giản: các chức năng của Laravel rất dễ hiểu và thực hiện.
 - Ngắn gọn: hầu hết các chức năng của Laravel hoạt động liên tục với cấu hình rất nhỏ, dựa vào các quy tắc chuẩn để giảm bớt code-bloat
@@ -121,40 +123,27 @@ location / {
 - Route can return View or Response and can skip Controller
 - Filters (`app/filters.php`) can occur(xảy ra) before or after Route
 
-## Directory struct of Laravel application
-Directory | Include 
 
-`/app`| Include controller, model, views and assets: contain your code
+#Part 2:
+##Create task base
+######Link document: https://viblo.asia/p/tim-hieu-ve-laravel-tao-cac-task-don-gian-p2-DXOGRnQPGdZ
+###1. Install
 
-`/public` | Store file css, javascrip, images, ... and start file `index.php`
+###2. Database prepare
 
-`/verdor` | Contain code of third party, plugin install for application
-`/app/config/`| Contain files configure when runing application as: database, session, etc.
+#### Database migrations
 
-`/app/config/app.php` | Configure setup layer application as: timezone, locale, modedug, unique key encode
+- Migration in Laravel like version control of database (like git version contril of source code)
 
-`/app/config/auth.php` | Drive authen
+- Provide define simple struct data table and flexible midification by php code.We need run migration in source control but every one unnecessary add column in local database.
 
-`/app/config/cache.php` | Cache data and response request faster
-
-`/app/database/migrations/` | Migration folder include php classes allow Laravel update Schema database but still keep all versions of databse when synchronized. Migration files create by Artisan tool
-
-`/app/database/seeds/` | Contain php files allow Artisan put into(đưa vào) table with data suggestions
-
-`/app/models/` | Contain model files of application
-
-`/app/views/` | Folder contain html files use by controller or route
-
-`/app/lang/` | Folder contain langluage use for pagination(phân trang) and authen from user with default language (common is Ennlish )
-
-`/app/start/` | Contain config related(liên quan) to Artisan tool, context local and gloal
-
-`/app/storage` | Folder store tempo files of Laravel services as: sesscion, cache, template view compile. This Folder can write by web server. Laravel control manage this folder and we uncessary intervence(can thiệp)
-
-`/app/routes.php` | Route file in your application, it save all route to inform with Laravel how to connect when have request.
-
-`/app/filter.php` | File use to limmit area access deny of web
+- Command make:migration to create new data migration is "task"
+```bar
+   php artisan make:migration create_tasks_table --create=tasks
+```
 
 
-Current Link: https://viblo.asia/p/tim-hieu-ve-framwork-laravel-p1-amoG8191vz8P
-position: /app/config/auth.php	
+- Migration will appear(xuất hiện) in database/migrations folder. 
+
+Link: https://viblo.asia/p/tim-hieu-ve-laravel-tao-cac-task-don-gian-p2-DXOGRnQPGdZ
+position: "Hãy sử file này và thêm cột name kiểu string cho các task của chúng tôi."
